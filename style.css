@@ -1,0 +1,112 @@
+@font-face {
+	/* 
+	https://css-tricks.com/snippets/css/using-font-face/ 
+	*/
+    font-family: "election";
+    src: url("font/election.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+body {
+    background-color: blanchedalmond;
+    font-family: "Arial Narrow", "Arial", "sans-serif";
+}
+
+h1 {
+    font-family: "election";
+}
+
+#header-content {
+	background-image: url("Images/redtile.png");
+	width: 1080px; /* 720, 640 adjust per OS */
+	height: 250px;
+	margin: auto;
+	
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#navbar {
+	background-image: url("Images/whitetile.png");
+	width: 1080px; /* 720, 640 adjust per OS */
+	height: 30px;
+    line-height: 30px;
+	margin: auto;
+	
+    border-left: 4px solid black;
+	border-right: 4px solid black;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    color: white;
+}
+
+/* The div needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 1000px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+    border-top: 4px solid black;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+	background-image: url("Images/whitetile.png");
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-image: url("Images/graytile.png");}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display: block;}
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+#body-content {
+	background-image: url("Images/bluetile.png");
+	width: 1080px; /* 720, 640 adjust per OS */
+	height: 600px;
+	margin: auto;
+	
+	border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
