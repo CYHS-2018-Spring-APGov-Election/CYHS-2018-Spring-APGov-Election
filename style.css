@@ -15,11 +15,12 @@ body {
 
 h1 {
     font-family: "election";
+    text-align: center;
 }
 
 #header-content {
 	background-image: url("Images/redtile.png");
-	width: 1080px; /* 720, 640 adjust per OS */
+	width: 1000px;
 	height: 250px;
 	margin: auto;
 	
@@ -35,24 +36,32 @@ h1 {
 
 #navbar {
 	background-image: url("Images/whitetile.png");
-	width: 1080px; /* 720, 640 adjust per OS */
+	width: 1000px;
 	height: 30px;
     line-height: 30px;
 	margin: auto;
+	text-align: center;
+	cursor: default;
 	
     border-left: 4px solid black;
 	border-right: 4px solid black;
+}
+
+#navTable {
+	display: inline-block;
+	width: 1000px;
+	height: 30px;
+}
+
+td {
+	display: inline-block;
+	vertical-align: top;
 }
 
 /* Dropdown Button */
 .dropbtn {
     border: none;
     cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    color: white;
 }
 
 /* The div needed to position the dropdown content */
@@ -90,14 +99,30 @@ h1 {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-image: url("Images/graytile.png");}
 
+.selection {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.selection:hover {
+	color: #6e6e6e;
+	cursor: pointer;
+}
+
+/*
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+*/
+
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display: block;}
 
-/*vvvvvvvvvvvvvvvvvvvvvvvvv*/
-
 #body-content {
 	background-image: url("Images/bluetile.png");
-	width: 1080px; /* 720, 640 adjust per OS */
+	width: 1000px;
 	height: 600px;
 	margin: auto;
 	

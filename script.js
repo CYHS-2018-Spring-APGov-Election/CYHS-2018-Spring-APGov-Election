@@ -1,46 +1,17 @@
 
-// 0 - 10 inclusive both sides
-// setInterval(alert(Math.floor(Math.random()*11)), 500);
-
-/*
-setInterval("randomColor()", 5);
-
-function randomColor() {
-	document.body.style.backgroundColor = "rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")";
-	document.getElementById("header-content").style.backgroundColor = "rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")";
-	document.getElementById("navbar").style.backgroundColor = "rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")";
-	document.getElementById("body-content").style.backgroundColor = "rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")";
-}
-*/
-
-var a = 0, toggle = false;
-const RATE = .02;
-
-function colorChange() {
-	document.body.style.backgroundColor = "rgba(0,0,0,"+a+")"
-	document.getElementById("header-content").style.backgroundColor = "rgba(0,0,0,"+a+")"
-	document.getElementById("navbar").style.backgroundColor = "rgba(0,0,0,"+a+")"
-	document.getElementById("body-content").style.backgroundColor = "rgba(0,0,0,"+a+")"
+function adjustTableWidth() {
+	var x = document.getElementById("navTable").getElementsByTagName("td");
+	var length = document.getElementById("navTable").getElementsByTagName("td").length;
 	
-	if (toggle) {
-		a -= RATE;
-	} else {
-		a += RATE;
-	}
-
-	if (a >= 1) {
-		toggle = true;
-	} else if (a <= 0) {
-		toggle = false;
-	}
-	
-	setTimeout("colorChange()", 30)
-	// recursion
-	
-	document.body.style.fontSize = (Math.floor(Math.random()*1000))+"px";
+	for (var i = 0; i < length; i++) {
+		x[i].style.width = (960/length) + "px";
+		//x[i].style.backgroundColor = "red"; 
+	}     
 }
 
-
+window.onload = function() {
+	adjustTableWidth();
+}
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
