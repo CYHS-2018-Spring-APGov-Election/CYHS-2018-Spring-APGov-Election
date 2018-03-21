@@ -10,11 +10,12 @@
 
 body {
     background-color: blanchedalmond;
-    font-family: "Arial Narrow", "Arial", "sans-serif";
+    font-family: "Arial Narrow", "Myriad Web Pro Condensed", "Arial", "sans-serif";
 }
 
 h1 {
     font-family: "election";
+    font-size: 50px;
     text-align: center;
 }
 
@@ -121,6 +122,62 @@ a:active {text-decoration: none;}
 .show {display: block;}
 
 #body-content {
+	background-image: url("Images/bluetile.png");
+	width: 1000px;
+	height: 600px;
+	margin: auto;
+	
+	border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#AE-1 {
+	background-image: url("Images/bluetile.png");
+	width: 1000px;
+	height: 120px;
+	margin: auto;
+	
+	border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+
+#AE-vid {
+	position: relative;
+	display: block;
+	width: 1000px;
+	height: 300px;
+	margin: auto;
+	
+	border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+#PatriotJon {
+	display: inline;
+	position: absolute;
+	z-index: 1;
+	
+	top: 18.8px;
+	left: 600px;
+}
+#flagVideo {
+	position: relative;
+	width: 1000px; 
+	height: 562.5px;
+	z-index: -1;
+	
+	top: -80px;
+}
+
+#AE-2 {
 	background-image: url("Images/bluetile.png");
 	width: 1000px;
 	height: 600px;
