@@ -5,13 +5,16 @@ function adjustTableWidth() {
 	
 	for (var i = 0; i < length; i++) {
 		x[i].style.width = (960/length) + "px";
+		console.log(960/length);
 		//x[i].style.backgroundColor = "red"; 
 	}     
 }
 
+/*	Determines td width
 window.onload = function() {
 	adjustTableWidth();
 }
+*/
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -40,3 +43,6 @@ window.onclick = function(event) {
     }
   }
 }
+
+console.log("I told you not to inspect my code.")
+console.log("GET OUT NOW!!!")
