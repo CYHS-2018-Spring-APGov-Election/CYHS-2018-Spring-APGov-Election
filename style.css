@@ -1,7 +1,9 @@
+/** 
+General Website Shenanigans 
+*/
+
+/* https://css-tricks.com/snippets/css/using-font-face/ */
 @font-face {
-	/* 
-	https://css-tricks.com/snippets/css/using-font-face/ 
-	*/
     font-family: "election";
     src: url("font/election.otf") format("truetype");
     font-weight: normal;
@@ -28,6 +30,19 @@ h1 {
 h2 {
     font-family: "election";
     font-size: 30px;
+    text-align: center;
+    color: #d3d3d3;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+}
+
+h3 {
+	font-family: "election";
+	font-style: italic;
+    font-size: 20px;
     text-align: center;
     color: #d3d3d3;
     text-shadow:
@@ -85,10 +100,14 @@ p {
 	height: 30px;
 }
 
-td {
+/* Will affect all table data cells! */
+td { 
 	display: inline-block;
 	vertical-align: top;
-	width: 240px; /* Determined with JS code */
+}
+
+.NavTD {
+	width: 240px;
 }
 
 /* Dropdown Button */
@@ -101,7 +120,7 @@ td {
 .dropdown {
     position: relative;
     display: inline-block;
-    height: 1000px;
+    height: 460px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -143,20 +162,15 @@ td {
 	cursor: pointer;
 }
 
-/*
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: none;}
-a:active {text-decoration: none;}
-*/
-
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display: block;}
-
-#ElectionAdvertisement {
-	border: 4px solid black;
-	margin-left: 220px;
+.show {
+	display: block;
 }
+
+
+/**
+Robust Classes
+*/
 
 .body-content {
 	background-image: url("Images/bluetile.png");
@@ -170,60 +184,83 @@ a:active {text-decoration: none;}
     border-right: 4px solid black;
 }
 
+.popup-body {
+	background-image: url("Images/bluetile.png");
+	background-color: #023ca9;
+}
+
+.popup-text {
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
 .bottom-curve {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
 
-#home-body-content {
-	/*height: 800px;*/
+.clickable {
+	cursor: pointer; 
 }
 
-#winner-body-content {
-	/*height: 600px;*/
+.hoverable:hover {
+	color: #ABABAB;
 }
 
-#leader-body-holder {
-	width: 1008px; /* accounting for border */
-	margin: auto;
+.blockquote {
+	padding-left: 200px; 
+	padding-right: 200px;
 }
 
-#leader-top {
-	border-bottom: none;
-	height: 208px; /* for repeating background image to work right */
-}
-#leader-left {
-	display: inline-block;
-	width: 104px;
-	height: 312px; /* Either 240 or 300 for repeating background to work */
-	
-	border-top: none;
-	border-right: none;
-	border-bottom: none;
-	
-	float: left;
-}
-#leader-right {
-	display: inline-block;
-	width: 596px;
-	height: 312px;
-	
-	border-top: none;
-	border-left: none;
-	border-bottom: none;
-	
-	float: right;
+.item-border {
+    border: 4px solid black;
 }
 
-#leader-top-2 {
-	display: inline-block;
-	border-top: none;
-	height: 200px;
+.commercial-center {
+	margin-left: 216px;
 }
 
-#AE-1 {
-	/*height: 120px;*/
+
+/** 
+Homepage
+*/
+
+#ElectionAdvertisement {
+	border: 4px solid black;
+	margin-left: 220px;
 }
+
+
+/** 
+The Golden Party
+*/
+
+#GoldenSymbol {
+	position: absolute;
+	z-index: 2;
+	margin-left: 80px;
+	margin-top: -80px;
+}
+
+#GoldenCandidate {
+	border: 4px solid black;
+	margin-left: 202.5px;
+}
+
+#GoldenPresident {
+	text-decoration: underline;
+}
+
+.GoldenTD {
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+
+/** 
+The American Economic Party
+*/
 
 #AE-vid {
 	position: relative;
@@ -235,6 +272,7 @@ a:active {text-decoration: none;}
 	border-left: 4px solid black;
     border-right: 4px solid black;
 }
+
 #PatriotJon {
 	display: inline;
 	position: absolute;
@@ -243,6 +281,7 @@ a:active {text-decoration: none;}
 	top: 18.8px;
 	left: 600px;
 }
+
 #flagVideo {
 	position: relative;
 	width: 1000px; 
@@ -252,6 +291,35 @@ a:active {text-decoration: none;}
 	top: -80px;
 }
 
-#AE-2 {
-	/*height: 600px;*/
+
+/**
+America First
+*/
+
+#AmericaFirstSymbol {
+	margin-left: 400px;
+	position: absolute;
+	margin-top: -68px;
 }
+
+.AmericaFirstTD {
+	text-align: center;
+	width: 400px;
+	/* padding taken care of within element so it overwrites styling of p */
+}
+
+.AmericaFirstTableText {
+	text-align: center;
+	display: inline-block;
+	width: 340px;
+}
+
+.AmericaFirstSolution {
+	font-size: 24px;
+	text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+}
+
