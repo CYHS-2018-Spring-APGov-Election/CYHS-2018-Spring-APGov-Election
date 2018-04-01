@@ -60,9 +60,6 @@ p {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;  
-    
-    padding-left: 150px;
-    padding-right: 150px;
 }
 
 #header-content {
@@ -221,6 +218,22 @@ Robust Classes
 	margin-left: 216px;
 }
 
+.left-right-border {
+	position: relative;
+	display: block;
+	width: 1000px;
+	height: 300px;
+	margin: auto;
+	
+	border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.paragraph-padding {
+	padding-left: 150px; 
+    padding-right: 150px;
+}
+
 
 /** 
 Homepage
@@ -243,11 +256,6 @@ The Golden Party
 	margin-top: -80px;
 }
 
-#GoldenCandidate {
-	border: 4px solid black;
-	margin-left: 202.5px;
-}
-
 #GoldenPresident {
 	text-decoration: underline;
 }
@@ -261,17 +269,6 @@ The Golden Party
 /** 
 The American Economic Party
 */
-
-#AE-vid {
-	position: relative;
-	display: block;
-	width: 1000px;
-	height: 300px;
-	margin: auto;
-	
-	border-left: 4px solid black;
-    border-right: 4px solid black;
-}
 
 #PatriotJon {
 	display: inline;
@@ -289,6 +286,13 @@ The American Economic Party
 	z-index: -1;
 	
 	top: -80px;
+}
+
+#AESymbol {
+	position: absolute;
+	z-index: 2;
+	margin-left: 700px;
+	margin-top: -40px;
 }
 
 
@@ -322,4 +326,34 @@ America First
     -2px 2px 0 #000,
     2px 2px 0 #000;  
 }
+
+
+/**
+The Cocktail Party
+*/
+
+#cocktailVideo {
+	position: relative;
+	width: 1000px; 
+	height: 562.5px;
+	z-index: -1;
+	
+	top: -10px;
+}
+
+#tannerImage {
+	float: left; 
+	display: inline-block; 
+	margin-left: 100px;
+	margin-top: 69.5px;
+}
+
+#bryceImage {
+	float: right; 
+	display: inline-block; 
+	margin-right: 100px;
+	margin-top: 30px;
+}
+
+
 
