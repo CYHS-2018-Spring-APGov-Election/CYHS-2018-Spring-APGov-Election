@@ -236,12 +236,30 @@ Robust Classes
 
 
 /** 
-Homepage
+Homepages
 */
 
 #ElectionAdvertisement {
 	border: 4px solid black;
 	margin-left: 220px;
+}
+
+.leaderHeading {
+	float: right;
+	text-align: center;
+	font-size: 40px;
+	width: 400px;
+	margin-right: 150px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.leaderText {
+	float: right;
+	text-align: center;
+	width: 400px;
+	margin-right: 150px;
+	margin-top: 10px;
 }
 
 
@@ -356,4 +374,16 @@ The Cocktail Party
 }
 
 
+/**
+The Cocktail Party
+*/
+
+#brightFire {
+	position: relative;
+	width: 1000px; 
+	height: 562.5px;
+	z-index: -1;
+	
+	top: -200px;
+}
 

@@ -10,6 +10,18 @@
 
 <title>2018 AP Gov Election</title>
 <link rel="icon" href="Images/favicon.png" type="image/png" />
+
+<script>
+var i = 0;
+
+function countUp() {
+	i = i + 1;
+	if (i == 30) {
+		document.getElementById("duma").play();
+		colorChange();
+	}
+}
+</script>
 </head>
 
 <body>
@@ -21,7 +33,7 @@
 <br />
 <div id="header-content">
 <!-- 2018 AP Gov US Presidential Election logo -->
-<img src="Images/APGov_LOGO.png" alt="Election Logo" width="471px" height="211.5px" style="margin-left: 264.5px; margin-top: 19.25px;" />
+<img onclick="countUp()" src="Images/APGov_LOGO.png" alt="Election Logo" width="471px" height="211.5px" style="margin-left: 264.5px; margin-top: 19.25px;" />
 </div>
 
 <div id="navbar">
@@ -62,17 +74,12 @@
 <p class="paragraph-padding">
 The 2018 AP Gov Presidential Election will feature a debate between candidates from six different student-created parties. 
 Information about the parties is found under the "Political Parties" tab. 
-The debates will be hosted Friday, April 6th in Room 131&mdash; exclusively during third period. 
+The debate will be hosted Friday, April 6th in Room 131&mdash; exclusively during third period. 
 After the debate, you will be allowed to vote for the candidate you think deserves to be president with the link provided on the "Winner" tab. 
-
 </p>
-<p class="paragraph-padding">
-Info about the election such as the date, location, and list of political parties. 
-Describe you can go into more detail on other tabs. Spring 2018 period 3. 
-Add my election advertisement above this paragraph and info... 
-Make sure you do a cool div-rip for Leaders page of us three (ripped on all four sides, if animated background). OR A SQUARE GIF!!!
-"and finally Carter, the tech manager who assembled the hardcoded website!!!! (please don't inspect my code)"
-</p>
+<audio loop id="duma" style="display: none;">
+  <source src="config/duma.mp3" type="audio/mpeg">
+</audio>
 
 
 <br />

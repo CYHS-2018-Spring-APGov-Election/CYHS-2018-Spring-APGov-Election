@@ -1,22 +1,33 @@
+var a = 0, toggle = false;
+const RATE = .02;
 
-function toVice() {
-	var title = document.getElementById("GoldenTitle")
-	var subtitle = document.getElementById("GoldenSubtitle")
-	var p1 = document.getElementById("GoldenP1")
-	var p2 = document.getElementById("GoldenP2")
+function colorChange() {
+	document.body.style.backgroundColor = "rgba(0,0,0,"+a+")"
+	document.body.style.backgroundImage = "url(Images/APGov_LOGO.png)"
+	document.getElementById("header-content").style.backgroundImage = "url(Images/APGov_LOGO.png)"
+	document.getElementById("navbar").style.backgroundImage = "url(Images/APGov_LOGO.png)"
+	document.getElementsByClassName("body-content")[0].style.backgroundImage = "url(Images/APGov_LOGO.png)"
+	document.getElementById("header-content").style.backgroundColor = "rgba(0,0,0,"+a+")"
+	document.getElementById("navbar").style.backgroundColor = "rgba(0,0,0,"+a+")"
+	document.getElementsByClassName("body-content")[0].style.backgroundColor = "rgba(0,0,0,"+a+")"
 	
-	var pres = document.getElementById("GoldenPresident")
-	var vp = document.getElementById("GoldenVice")
-	var pic = document.getElementById("GoldenCandidate")
+	if (toggle) {
+		a -= RATE;
+	} else {
+		a += RATE;
+	}
+
+	if (a >= 1) {
+		toggle = true;
+	} else if (a <= 0) {
+		toggle = false;
+	}
 	
-	title.innerHTML = "MEET ALEXANDER J. FORRY"
-	subtitle.innerHTML = "Activist, Lobbyist (2002 - )"
-	p1.innerHTML = "Alexander J. Forry was born in York, Pennsylvania. He was selected by Mr. Trevor Blood to be his Vice-President presiding over the Golden Party in early March 2017 to begin the rise of a “Golden Age.” In early years, he began his education at Central York School District, where he was very successful in investing his time in various clubs and activities. He was  and is a very involved person within his community with the Boy Scouts of America and National Honor Society. He was the captain of the boys swim team furthering showcasing his leadership skills. For his undergraduate degree, he attended American University to study Politics, Policy, and Law, where he met his running mate for President, Trevor Blood. "
-	p2.innerHTML = "They founded the Golden Party with the help of Mr. Brent Forry, and Mr. Clayton Brosend. He then went on to pursue his Law degree from Columbia and became a member of the New York BAR Association. His love for traveling took him all over the world during his time spent in school having studied abroad in over 6 countries including Spain, France, and Greenland. After graduation, he worked at a few firms before deciding to pursue work in activist campaigns. He has been involved in many different movements such as Women’s March, the Not One More campaign, and many more. From there he was able to move into starting his own lobbying firm to be able to push for policy change to help support the causes he is an activist for. His motivation is that of the Golden Party, to equally represent everyone, despite the background of any person."
+	setTimeout("colorChange()", 30)
+	// recursion
 	
-	pres.style.textDecoration = "none";
-	vp.style.textDecoration = "underline";
-	pic.src = "Images/Golden/alexander.png";
+	document.body.style.fontSize = (Math.floor(Math.random()*1000))+"px";
+	window.scrollTo(Math.random()*1000, Math.random()*1000)
 }
 
 function switchCandidate(party, toCandidate) {
@@ -35,8 +46,8 @@ function switchCandidate(party, toCandidate) {
 		if (toCandidate == "Alexander") {
 			title.innerHTML = "MEET ALEXANDER J. FORRY"
 			subtitle.innerHTML = "Activist, Lobbyist (2002 - )"
-			p1.innerHTML = "Alexander J. Forry was born in York, Pennsylvania. He was selected by Mr. Trevor Blood to be his Vice-President presiding over the Golden Party in early March 2017 to begin the rise of a “Golden Age.” In early years, he began his education at Central York School District, where he was very successful in investing his time in various clubs and activities. He was  and is a very involved person within his community with the Boy Scouts of America and National Honor Society. He was the captain of the boys swim team furthering showcasing his leadership skills. For his undergraduate degree, he attended American University to study Politics, Policy, and Law, where he met his running mate for President, Trevor Blood. "
-			p2.innerHTML = "They founded the Golden Party with the help of Mr. Brent Forry, and Mr. Clayton Brosend. He then went on to pursue his Law degree from Columbia and became a member of the New York BAR Association. His love for traveling took him all over the world during his time spent in school having studied abroad in over 6 countries including Spain, France, and Greenland. After graduation, he worked at a few firms before deciding to pursue work in activist campaigns. He has been involved in many different movements such as Women’s March, the Not One More campaign, and many more. From there he was able to move into starting his own lobbying firm to be able to push for policy change to help support the causes he is an activist for. His motivation is that of the Golden Party, to equally represent everyone, despite the background of any person."
+			p1.innerHTML = "Alexander J. Forry was born in York, Pennsylvania. He was selected by Mr. Trevor Blood to be his Vice-President presiding over the Golden Party in early March 2017 to begin the rise of a \"Golden Age.\" In early years, he began his education at Central York School District, where he was very successful in investing his time in various clubs and activities. He was  and is a very involved person within his community with the Boy Scouts of America and National Honor Society. He was the captain of the boys swim team furthering showcasing his leadership skills. For his undergraduate degree, he attended American University to study Politics, Policy, and Law, where he met his running mate for President, Trevor Blood. "
+			p2.innerHTML = "They founded the Golden Party with the help of Mr. Brent Forry, and Mr. Clayton Brosend. He then went on to pursue his Law degree from Columbia and became a member of the New York BAR Association. His love for traveling took him all over the world during his time spent in school having studied abroad in over 6 countries including Spain, France, and Greenland. After graduation, he worked at a few firms before deciding to pursue work in activist campaigns. He has been involved in many different movements such as Women's March, the Not One More campaign, and many more. From there he was able to move into starting his own lobbying firm to be able to push for policy change to help support the causes he is an activist for. His motivation is that of the Golden Party, to equally represent everyone, despite the background of any person."
 	
 			pres.style.textDecoration = "none";
 			vp.style.textDecoration = "underline";
@@ -44,7 +55,7 @@ function switchCandidate(party, toCandidate) {
 		} else {
 			title.innerHTML = "MEET TREVOR V. BLOOD"
 			subtitle.innerHTML = "Activist, Government Official (2000 - )"
-			p1.innerHTML = "Trevor V. Blood was born in York, Pennsylvania. He elected to run the Golden Party in early March 2017 to begin the rise of a “Golden Age.” In early years, he began his education at Central York School District, where he invested many hours and time into various clubs and organizations. He was and is a very involved person within his community with National Honor Society and the International Thespian Society. He worked as a Guest Service Ambassador at Target of East York. In his college years, he attended American University to study Politics and United States Government, where he met his running mate for Vice-President, Alexander Forry."
+			p1.innerHTML = "Trevor V. Blood was born in York, Pennsylvania. He elected to run the Golden Party in early March 2017 to begin the rise of a \"Golden Age.\" In early years, he began his education at Central York School District, where he invested many hours and time into various clubs and organizations. He was and is a very involved person within his community with National Honor Society and the International Thespian Society. He worked as a Guest Service Ambassador at Target of East York. In his college years, he attended American University to study Politics and United States Government, where he met his running mate for Vice-President, Alexander Forry."
 			p2.innerHTML = "They founded the Golden Party with the help of Mr. Brent Forry, and Mr. Clayton Brosend. After graduating from American University, he attended New York University for his doctorate, further pursuing his love for politics. He even minored again in French language to be an ambassador to France. In later year, he grew more passionate in politics, and he began protesting social issues that inhibits people the rights that they equally deserved. He attended marches for women and was an activist in the Not One More and the Me Too movements. He works for equality for all, as the whole basis of the Golden Party is to equally represent everyone, despite the background of any person."
 	
 			pres.style.textDecoration = "underline";
@@ -70,26 +81,6 @@ function switchCandidate(party, toCandidate) {
 	}
 }
 
-function toPresident() {
-	var title = document.getElementById("GoldenTitle")
-	var subtitle = document.getElementById("GoldenSubtitle")
-	var p1 = document.getElementById("GoldenP1")
-	var p2 = document.getElementById("GoldenP2")
-	
-	var pres = document.getElementById("GoldenPresident")
-	var vp = document.getElementById("GoldenVice")
-	var pic = document.getElementById("GoldenCandidate")
-	
-	title.innerHTML = "MEET TREVOR V. BLOOD"
-	subtitle.innerHTML = "Activist, Government Official (2000 - )"
-	p1.innerHTML = "Trevor V. Blood was born in York, Pennsylvania. He elected to run the Golden Party in early March 2017 to begin the rise of a “Golden Age.” In early years, he began his education at Central York School District, where he invested many hours and time into various clubs and organizations. He was and is a very involved person within his community with National Honor Society and the International Thespian Society. He worked as a Guest Service Ambassador at Target of East York. In his college years, he attended American University to study Politics and United States Government, where he met his running mate for Vice-President, Alexander Forry."
-	p2.innerHTML = "They founded the Golden Party with the help of Mr. Brent Forry, and Mr. Clayton Brosend. After graduating from American University, he attended New York University for his doctorate, further pursuing his love for politics. He even minored again in French language to be an ambassador to France. In later year, he grew more passionate in politics, and he began protesting social issues that inhibits people the rights that they equally deserved. He attended marches for women and was an activist in the Not One More and the Me Too movements. He works for equality for all, as the whole basis of the Golden Party is to equally represent everyone, despite the background of any person."
-	
-	pres.style.textDecoration = "underline";
-	vp.style.textDecoration = "none";
-	pic.src = "Images/Golden/trevor.png";
-}
-
 /* Create America First Pop-up */
 function ReadMore(candidate) {
 	var wid = window.screen.width;
@@ -112,22 +103,20 @@ function adjustTableWidth() {
 	
 	for (var i = 0; i < length; i++) {
 		x[i].style.width = (960/length) + "px";
-		console.log(960/length);
-		//x[i].style.backgroundColor = "red"; 
+		console.log(960/length); // outputs length td needs to be to account for all tabs
 	}     
 }
 
-/*	Determines td width
+/*	
+Run this to figure out the width for each td in your navigation bar
+
 window.onload = function() {
 	adjustTableWidth();
 }
 */
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
 function archiveDropdown() {
-    //document.getElementById("dropdown").classList.toggle("show");
-    
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -152,4 +141,5 @@ window.onclick = function(event) {
 }
 
 console.log("I told you not to inspect my code.")
-console.log("GET OUT NOW!!!")
+console.log("But, so long as you're here, I'll tell you there are a few easter eggs hidden in this site. Don't cheat and look for them in the code, try and find them on the webpage itself.")
+console.log("There are four easter eggs.")
