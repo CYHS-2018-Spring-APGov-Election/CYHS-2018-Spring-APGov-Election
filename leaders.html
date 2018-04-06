@@ -18,7 +18,9 @@ function littleChange() {
 		document.getElementById("myFace").style.opacity = "1"
 		click = 1
 	}
-	document.getElementById("myFace").style.opacity -= "0.01"
+	if (document.getElementById("myFace").style.opacity != "0.5") {
+		document.getElementById("myFace").style.opacity -= "0.01"
+	}
 }
 </script>
 </head>
@@ -57,7 +59,7 @@ function littleChange() {
 	</div>
 	</td>
 	
-	<td class="NavTD"><a href="winner.html" class="selection">Winner</td>
+	<td class="NavTD"><a href="winner.html" class="selection">VOTE HERE!</td>
 </table>
 
 </div>
